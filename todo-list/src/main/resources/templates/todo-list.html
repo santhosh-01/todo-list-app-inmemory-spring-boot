@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Todo List</title>
+<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap.min.css"
+      th:href="@{/webjars/bootstrap/2.3.0/css/bootstrap.min.css}" rel="stylesheet" />
+</head>
+<body>
+<h2>Todo List</h2>
+<table border=1 class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Date</th>
+      <th>Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="task : ${tasks}">     
+      <td th:text="${task.todoTitle}"></td>
+      <td th:text="${task.todoDescription}"></td>  
+      <td th:text="${task.date}"></td>   
+      <td th:text="${task.time}"></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
